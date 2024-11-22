@@ -1,5 +1,6 @@
 body {
-    background-color: #ddc738;
+    /*background-color: #c8cc84 /*#a4bc74 #ddc738*/
+    background: linear-gradient(to bottom left,#acc469,#c8cc84, #acc469);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -22,9 +23,20 @@ h1{
     height: auto;
     border-radius: 10px;
 }
-.text {
+.leftText {
     max-width: 600px;
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     padding-right: 20px;
+}
+.cuteButton{
+    width: 100%;
+    background-color: #FFF5B3;
+    border: 3.5px solid #DDC738;
+    padding: 16px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
 }
