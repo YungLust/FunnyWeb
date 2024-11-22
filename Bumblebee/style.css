@@ -1,0 +1,30 @@
+body {
+    background-color: #ddc738;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    gap: 50px; /* Add spacing between text and image */
+}
+
+h1{
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.text {
+    max-width: 600px;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding-right: 20px;
+}
