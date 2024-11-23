@@ -4,6 +4,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+h1{
+    text-align: center;
+}
+
 .container {
     display: flex;
     align-items: top;
@@ -14,29 +18,53 @@ body {
     gap: 50px; /* Add spacing between text and image */
 }
 
-h1{
-    text-align: center;
-}
-
-.image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 .leftText {
     max-width: 600px;
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     padding-right: 20px;
 }
-.cuteButton{
-    width: 100%;
-    background-color: #FFF5B3;
-    border: 3.5px solid #DDC738;
-    padding: 16px;
+
+.leftText h2{
+    margin-top: 24px;
+    margin-bottom: 15px;
+}
+
+.beeImg img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btnSection {
+    display: flex;
+    align-items: center;
+    gap: 24px;
     margin-top: 20px;
-    font-size: 20px;
+}
+
+.btnSection img {
+    width: 30px;
+    height: auto;
+}
+
+.petBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #FFF5B3;
+    border: 3px solid #DDC738;
+    padding:12px;
+    padding-left: 18px;
+    padding-right: 18px;
+
+    font-size: 18px;
     font-weight: bold;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.outputField{
+    font-size: 20px;
 }
