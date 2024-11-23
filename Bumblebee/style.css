@@ -2,11 +2,30 @@ body {
     /*background-color: #c8cc84 /*#a4bc74 #ddc738*/
     background: linear-gradient(to bottom left,#acc469,#c8cc84, #acc469);
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 h1{
     text-align: center;
 }
+
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
 
 .container {
     display: flex;
@@ -14,7 +33,7 @@ h1{
     justify-content: space-between;
     padding: 20px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1250px;
     gap: 50px; /* Add spacing between text and image */
 }
 
@@ -32,14 +51,15 @@ h1{
 
 .beeImg img {
     max-width: 100%;
-    height: auto;
+    height: auto ;
     border-radius: 10px;
 }
 
-.btnSection {
+.btnSection {/*
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 24px;*/
+    min-height: 150px;
     margin-top: 25px;
 }
 
@@ -65,5 +85,30 @@ h1{
 }
 
 .outputField{
-    font-size: 20px;
+    font-size: 32px;
+}
+
+
+.authorFooter{
+    display: flex;
+    background-color: #ddc738;
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+}
+
+.authorFooter a {
+    font-family: Helvetica;
+    text-decoration: none;
+    color: black;
+    font-weight:bold;
+    font-size: 12px;
+    transition: 0.4s;
+    padding: 12px;
+    min-height: 15px;
+}
+
+.authorFooter a:hover {
+    font-size: 13px;
+    text-shadow: 0 0 5px #00000030;
 }
