@@ -7,7 +7,7 @@ let newText = "";
 btn.addEventListener('click', function(event){
     //currText = outputField.textContent;
     
-    if (newText.length < 25 ){
+    if (newText.length < 30 ){
         newText += getRandomSymbol();
     }
     else{
@@ -17,6 +17,6 @@ btn.addEventListener('click', function(event){
 })
 
 function getRandomSymbol() {
-    let symbol = Math.floor(Math.random()*10)+1;
+    let symbol = Math.floor(Math.random()*10);
     return symbol;
 }

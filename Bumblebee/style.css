@@ -40,7 +40,7 @@ h1{
     display: flex;
     align-items: center;
     gap: 24px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .btnSection img {
@@ -58,7 +58,6 @@ h1{
     padding:12px;
     padding-left: 18px;
     padding-right: 18px;
-
     font-size: 18px;
     font-weight: bold;
     border-radius: 20px;
