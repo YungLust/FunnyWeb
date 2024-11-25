@@ -63,28 +63,57 @@ a:link {
     margin-top: 25px;
 }
 
-.btnSection img {
-    width: 30px;
-    height: auto;
-}
-
 .petBtn{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     background-color: #FFF5B3;
-    border: 3px solid #DDC738;
-    padding:12px;
-    padding-left: 18px;
-    padding-right: 18px;
-    font-size: 18px;
+    border: 4px solid #DDC738;
+    padding:14px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 20px;
     cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.petBtn:hover{
+    padding: 15px;
+    padding-right: 32px;
+    padding-left: 32px;
+    font-size: 21px;
+}
+
+.btnSection img {
+    width: 35px;
+    height: auto;
+}
+
+.counter{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.counter p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5c5c;
+    color: rgb(14, 33, 125);
+    background-color: #0008a940;
+    padding: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 16px;
+    /*text-shadow: 0 0 5px #FFFFFF;
+    color: hsl(34,100,50);*/
 }
 
 .outputField{
+    min-height: 45px;
     font-size: 32px;
     color: #8A0303;
 }

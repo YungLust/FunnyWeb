@@ -1,15 +1,18 @@
 const outputField = document.querySelector('.outputField');
+const counterField = document.querySelector('.counterField');
 const btn = document.querySelector('.petBtn');
-const maxSymbols = 13
+const maxSymbols = 13;
 
-let newText = "";
 const emojis = ["❤️","🥰", "🐝", "☀️", "🤗", "🩷"];
 const secretPhrases = ["KY$", "404", "?", "K̷̨͖̣̰̠̝̬̝͔̲͖̝̜̩̤̟͙̙̘̥̻̩͔͓̺̲͙̱̬̭͖̪͕̩̺̟̠̪̪͈͙̙̪̣̼̻̐̀̈́̓̂͋̀̂̍̉̍͂̓͗́̀̉̊̕͘͠ͅY̷̨̢̡̛̻̮̼̖͙̥͓̜̩͖̖̬͓̖̞̩̖͈͙͖̭̩̩͖̱͇͚̳͉̠̮̙̪̗̫͚͐̊̃̆̾̃̑̀͆̈́̆̅͑̉̓̅̀̅͗̊͗̀̚͝ͅͅ$̷̨̛̛̫̟̺͙͙̪̠͓̦̦͎̗̟̼̰͈̑̇̂͆̑̈́̿̂̉̅̈́͒͗͋̀̄̄̆̊̑̍̂̂̄́̄̌̕͘̕̚̕͜͠͝"]
 
+let newText = "";
+let counter = 20;
+
 btn.addEventListener('click', async function(event){
-    //currText = outputField.textContent;
+    counter++;
     let secret = Math.floor(Math.random()*100);
-    console.log(secret);
+    
     if (newText.length < maxSymbols*2){
         newText += getRandomSymbol();
     }
@@ -24,6 +27,9 @@ btn.addEventListener('click', async function(event){
     await sleep(25);
     newText=newText.replace(/[!-@0-9a-zA-Zа-яА-Я]/g, "");
     outputField.textContent = newText;
+    counterField.textContent = counter;
+    counterField.style.cssText = `color: hsl(${counter}, 100%, 50%);`; //back sticks to allow use of the variables
+    
 })
 
 function getRandomSymbol() {
@@ -40,5 +46,5 @@ function sleep(ms) {
 /* todo: 
  cool animation while clicking on button
  cool cool popup when clicking on my nickname in footer
- cool counter at the bottom right footer or in front of the button 
+ cool saving of counter variable in cache
 */
