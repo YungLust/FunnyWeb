@@ -7,7 +7,8 @@ const emojis = ["❤️","🥰", "🐝", "☀️", "🤗", "🩷"];
 const secretPhrases = ["KY$", "404", "?", "K̷̨͖̣̰̠̝̬̝͔̲͖̝̜̩̤̟͙̙̘̥̻̩͔͓̺̲͙̱̬̭͖̪͕̩̺̟̠̪̪͈͙̙̪̣̼̻̐̀̈́̓̂͋̀̂̍̉̍͂̓͗́̀̉̊̕͘͠ͅY̷̨̢̡̛̻̮̼̖͙̥͓̜̩͖̖̬͓̖̞̩̖͈͙͖̭̩̩͖̱͇͚̳͉̠̮̙̪̗̫͚͐̊̃̆̾̃̑̀͆̈́̆̅͑̉̓̅̀̅͗̊͗̀̚͝ͅͅ$̷̨̛̛̫̟̺͙͙̪̠͓̦̦͎̗̟̼̰͈̑̇̂͆̑̈́̿̂̉̅̈́͒͗͋̀̄̄̆̊̑̍̂̂̄́̄̌̕͘̕̚̕͜͠͝"]
 
 let newText = "";
-let counter = 0;
+let counter = retrieve();
+changeCounter();
 
 btn.addEventListener('click', async function(event){
     counter++;
@@ -27,8 +28,7 @@ btn.addEventListener('click', async function(event){
     await sleep(25);
     newText=newText.replace(/[!-@0-9a-zA-Zа-яА-Я]/g, "");
     outputField.textContent = newText;
-    counterField.textContent = counter;
-    counterField.style.cssText = `color: hsl(${counter}, 100%, 50%);`; //back sticks to allow use of the variables
+    changeCounter();
     
 })
 
@@ -38,9 +38,27 @@ function getRandomSymbol() {
     return symbol;
 }
 
-
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms)); //magic code
+}
+
+function changeCounter(){
+    counterField.textContent = counter;
+    counterField.style.cssText = `color: hsl(${counter}, 100%, 50%);`; //back sticks to allow use of the variables
+}
+
+// function to do before unloading
+window.addEventListener("beforeunload", function(e){
+    save();
+ });
+
+function save(){
+    localStorage.setItem("counterValue", JSON.stringify(counter));
+}
+
+function retrieve(){
+    let retrievedCounter = localStorage.getItem("counterValue");
+    return Number(retrievedCounter);
 }
 
 /* todo: 
