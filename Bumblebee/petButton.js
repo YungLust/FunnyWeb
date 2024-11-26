@@ -32,6 +32,12 @@ btn.addEventListener('click', async function(event){
     
 })
 
+btn.addEventListener('contextmenu', function(event){
+    event.preventDefault();
+    changeCounter(0);
+
+})
+
 function getRandomSymbol() {
     let random = Math.floor(Math.random()*emojis.length)
     let symbol = emojis[random];  
@@ -42,7 +48,10 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms)); //magic code
 }
 
-function changeCounter(){
+function changeCounter(newValue){
+    //console.log(newValue,newValue==null); //true, undefined = null
+
+    counter = (newValue == null) ? counter : newValue
     counterField.textContent = counter;
     counterField.style.cssText = `color: hsl(${counter}, 100%, 50%);`; //back sticks to allow use of the variables
 }
@@ -60,6 +69,7 @@ function retrieve(){
     let retrievedCounter = localStorage.getItem("counterValue");
     return Number(retrievedCounter);
 }
+
 
 /* todo: 
  cool animation while clicking on button
