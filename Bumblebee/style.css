@@ -117,6 +117,10 @@ a:link {
     color: #8A0303;
 }
 
+.starField{
+    min-height: 45px;
+    font-size: 32px;
+}
 
 .authorFooter{
     display: flex;
